@@ -33,7 +33,7 @@ while True:
         deltaX = (float(Vfinal)**2 - float(Vinitial)**2) / (2 * float(acceleration))
         print(str(deltaX)+ "m")
     elif (solveFor == "v0") and (deltaX != "u") and (acceleration != "u") and (Vfinal  != "u"):
-        Vinitial = math.sqrt(float(Vfinal)**2 - (2 * float(accleration) * float(deltaX)))
+        Vinitial = math.sqrt(float(Vfinal)**2 - (2 * float(acceleration) * float(deltaX)))
         print(str(Vinitial) + "m/s")
     elif (solveFor == "a") and (deltaX != "u") and (Vinitial != "u") and (Vfinal  != "u"):
         acceleration = (float(Vfinal)**2 - float(Vinitial)**2) / (2 * float(deltaX))
