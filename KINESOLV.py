@@ -1,3 +1,5 @@
+# Created by Rohan Reddy
+
 import math
 print("Welcome to kinematic equation solver")
 print("Enter any unknown value as u")
