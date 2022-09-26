@@ -10,7 +10,7 @@ print("")
 print("      Welcome to Kinematic")
 print("        Equation Solver!")
 print("     Created by Rohan Reddy")
-print("   Stylized by Spencer Boggs.")
+print("    Updated by Spencer Boggs")
 print("")
 print(" Enter any unknown value as u")
 print(" Ensure velocities are in m/s,")
@@ -80,6 +80,7 @@ while True:
         print("x = " + str(deltaX)+ "m")
         print("Equation: V^2 = v0^2 + 2ax")
         print(str(Vfinal)**2 + " = " + str(Vinitial)**2 + "^2 + (2)" + str(acceleration) + "(x)" )
+        print(str(deltaX) + " = (" + str(float(Vfinal)**2) + " - " + str(float(Vinitial)**2) + ")/" + str(2 * float(acceleration)))
 
     #Requires v, a, x
     #Try absolute value
@@ -89,6 +90,7 @@ while True:
         #print("v0 = " + str(Vinitial) + "m/s")
         #print("Equation: V^2 = v0^2 + 2ax")
         #print(str(Vfinal)**2 + " = " + "v0^2 + (2)" + str(acceleration) + "(" + str(deltaX) + ")" )
+        #print(str(Vinitial) + " = sqrt(" + str(float(Vfinal)**2) + " - " + "(" + str(2 * float(acceleration)) + " * " + str(deltaX) + "))")
 
     #Requires v, v0, deltaX
     elif (solveFor == "a") and (deltaX != "u") and (Vinitial != "u") and (Vfinal  != "u"):
