@@ -53,6 +53,7 @@ while True:
         print("a = " + str(acceleration) + "m/s^2")
         print("Equation: v = v0 + at")
         print(str(Vfinal) + " = " + str(Vinitial) + " + " + "a" + "(" + str(time) + ")")
+        print(str(acceleration) + " = " + "(" + str(Vfinal) + " - " + str(Vinitial) + ")/" + str(time))
 
     #Requires v0, v, a
     elif (solveFor == "t") and (Vfinal != "u") and (Vinitial != "u") and (acceleration != "u"):
@@ -61,7 +62,7 @@ while True:
         print("t = " + str(time)+ "s")
         print("Equation: v = v0 + at")
         print(str(Vfinal) + " = " + str(Vinitial) + " + " + str(acceleration) + "(t)")
-
+        print(str(time) + " = " + "(" + str(Vfinal) + " - " + str(Vinitial) + ")/" + str(acceleration))
 
     #V^2 = v0^2 + 2ax
     #Requires v0, a, x
@@ -81,6 +82,7 @@ while True:
         print(str(Vfinal)**2 + " = " + str(Vinitial)**2 + "^2 + (2)" + str(acceleration) + "(x)" )
 
     #Requires v, a, x
+    #Try absolute value
     #elif (solveFor == "v0") and (deltaX != "u") and (acceleration != "u") and (Vfinal  != "u"):
         #Vinitial = math.sqrt(float(Vfinal)**2 - (2 * float(acceleration) * float(deltaX)))
         #print("")
