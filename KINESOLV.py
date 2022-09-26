@@ -1,4 +1,5 @@
 # Created by Rohan Reddy
+# Updated by Spencer Boggs
 
 import math
 print("")
@@ -43,6 +44,7 @@ while True:
         print("v0 = " + str(Vinitial) + "m/s")
         print("Equation: v = v0 + at")
         print(str(Vfinal) + " = v0 + " + str(acceleration) + "(" + str(time) + ")")
+        print(str(Vinitial) + " = " + str(Vfinal) + " - " + "(" + str(acceleration) + "*" + str(time) + ")")
 
     #Requires v0, v, t
     elif (solveFor == "a") and (Vfinal != "u") and (Vinitial != "u") and (time != "u"):
