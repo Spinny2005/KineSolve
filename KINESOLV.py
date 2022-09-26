@@ -102,6 +102,7 @@ while True:
         print("")
         print("x = " + str(deltaX) + "m")
         print("Equation: x = v0t + 1/2 * at^2")
+        print("x = " + str(Vinitial) + " + (1/2)" + str(acceleration) + "(" + str(time) + ")^2" )
 
     #Requires x, v0, t
     elif (solveFor == "a") and (Vinitial != "u") and (deltaX != "u") and (time != "u"):
@@ -109,6 +110,7 @@ while True:
         print("")
         print("a = " + str(acceleration)+ "m/s^2")
         print("Equation: x = v0t + 1/2 * at^2")
+        print(str(deltaX) + " = " + str(Vinitial) + " + (1/2)a(" + str(time) + ")^2" )
 
     #Requires x, a, t
     elif (solveFor == "v0") and (acceleration != "u") and (deltaX != "u") and (time != "u"):
@@ -116,6 +118,7 @@ while True:
         print("")
         print("v0 = " + str(Vinitial) + "m/s")
         print("Equation: x = v0t + 1/2 * at^2")
+        print(str(deltaX) + " = v0 + (1/2)" + str(acceleration) + "(" + str(time) + ")^2" )
 
     #Requires a, v0, x
     elif (solveFor == "t") and (acceleration != "u") and (deltaX != "u") and (Vinitial != "u"):
@@ -129,6 +132,8 @@ while True:
         print("")
         print("t = " + str(time)+ "s")
         print("Equation: x = v0t + 1/2 * at^2")
+        print(str(deltaX) + " = " + str(Vinitial) + " + (1/2)" + str(acceleration) + "(t)^2" )
+
 
     else:
         print("Unsolvable.")
