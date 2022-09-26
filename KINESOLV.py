@@ -1,15 +1,22 @@
 # Created by Rohan Reddy
 
 import math
-print("Welcome to kinematic equation solver")
+print("")
+print("")
+print("")
+print("")
+print("")
+print("Welcome to kinematic")
+print("equation solver")
 print("Enter any unknown value as u")
 print("Ensure that velocities are in m/s, acceleration is in m/s^2, time is in s, and distance is in m")
+
 while True:
-    Vfinal = input("Enter Vfinal: ")
-    Vinitial = input("Enter Vinitial: ")
-    acceleration = input("Enter acceleration: ")
-    time = input("Enter time: ")
-    deltaX = input("Enter displacement: ")
+    Vfinal = input("Enter Vfinal (v): ")
+    Vinitial = input("Enter Vinitial (v0): ")
+    acceleration = input("Enter acceleration (a): ")
+    time = input("Enter time (t): ")
+    deltaX = input("Enter displacement (x-x0): ")
     solveFor = input("Enter variable to solve for (v, v0, a, t, x): ")
 
     #V = v0 + at
