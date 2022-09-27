@@ -67,7 +67,7 @@ while True:
     #V^2 = v0^2 + 2ax
     #Requires v0, a, x
     elif (solveFor == "v") and (Vinitial != "u") and (acceleration != "u") and (deltaX != "u"):
-        Vfinal = math.sqrt(float(Vinitial)**2 + 2 * float(acceleration) * float(deltaX))
+        Vfinal = math.sqrt(math.abs(float(Vinitial)**2 + 2 * float(acceleration) * float(deltaX)))
         print("")
         print("v = " + str(Vfinal) + "m/s")
         print("Equation: V^2 = v0^2 + 2ax")
@@ -83,13 +83,12 @@ while True:
         #print(str(deltaX) + " = (" + str(float(Vfinal)**2) + " - " + str(float(Vinitial)**2) + ")/" + str(2 * float(acceleration)))
 
     #Requires v, a, x
-    #Try absolute value
-    #elif (solveFor == "v0") and (deltaX != "u") and (acceleration != "u") and (Vfinal  != "u"):
-        #Vinitial = math.sqrt(float(Vfinal)**2 - (2 * float(acceleration) * float(deltaX)))
-        #print("")
-        #print("v0 = " + str(Vinitial) + "m/s")
-        #print("Equation: V^2 = v0^2 + 2ax")
-        #print(str(Vfinal)**2 + " = " + "v0^2 + (2)" + str(acceleration) + "(" + str(deltaX) + ")" )
+    elif (solveFor == "v0") and (deltaX != "u") and (acceleration != "u") and (Vfinal  != "u"):
+        Vinitial = math.sqrt(math.abs(float(Vfinal)**2 - (2 * float(acceleration) * float(deltaX))))
+        print("")
+        print("v0 = " + str(Vinitial) + "m/s")
+        print("Equation: V^2 = v0^2 + 2ax")
+        print(str(Vfinal)**2 + " = " + "v0^2 + (2)" + str(acceleration) + "(" + str(deltaX) + ")" )
         #print(str(Vinitial) + " = sqrt(" + str(float(Vfinal)**2) + " - (" + str(2 * float(acceleration)) + " * " + str(deltaX) + "))")
 
     #Requires v, v0, deltaX
