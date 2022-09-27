@@ -90,7 +90,7 @@ while True:
         #print("v0 = " + str(Vinitial) + "m/s")
         #print("Equation: V^2 = v0^2 + 2ax")
         #print(str(Vfinal)**2 + " = " + "v0^2 + (2)" + str(acceleration) + "(" + str(deltaX) + ")" )
-        print(str(Vinitial) + " = sqrt(" + str(float(Vfinal)**2) + " - (" + str(2 * float(acceleration)) + " * " + str(deltaX) + "))")
+        #print(str(Vinitial) + " = sqrt(" + str(float(Vfinal)**2) + " - (" + str(2 * float(acceleration)) + " * " + str(deltaX) + "))")
 
     #Requires v, v0, deltaX
     elif (solveFor == "a") and (deltaX != "u") and (Vinitial != "u") and (Vfinal  != "u"):
