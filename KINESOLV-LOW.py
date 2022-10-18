@@ -112,10 +112,10 @@ while True:
         a = 0.5 * float(acceleration)
         b = float(Vinitial)
         c = float(deltaX) * -1
-        if ((-b + math.sqrt(b**2 - 4 * a * c))/(2*a)) < 0:
-            time = ((-b - math.sqrt(b**2 - 4 * a * c))/(2*a))
+        if ((-b + math.sqrt(abs(b**2 - 4 * a * c)))/(2*a)) < 0:
+            time = ((-b - math.sqrt(abs(b**2 - 4 * a * c)))/(2*a))
         else:
-            time = (-b + math.sqrt(b**2 - 4 * a * c))/(2*a)
+            time = (-b + math.sqrt(abs(b**2 - 4 * a * c)))/(2*a)
         print("")
         print("t = " + str(time)+ "s")
         print("Equation: x = v0t + 1/2 * at^2")
