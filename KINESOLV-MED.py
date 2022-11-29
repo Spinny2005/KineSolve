@@ -116,7 +116,7 @@ while True:
         print("")
         print("v0 = " + str(Vinitial) + "m/s")
         print("Equation: x = v0t + 1/2 * at^2")
-        print(str(deltaX) + " = v0 + (1/2)" + str(acceleration) + "(" + str(time) + ")^2" )
+        print(str(deltaX) + " = v0(" + str(time) + ") + (1/2)" + str(acceleration) + "(" + str(time) + ")^2" )
 
     #Requires a, v0, x
     elif (solveFor == "t") and (acceleration != "u") and (deltaX != "u") and (Vinitial != "u"):

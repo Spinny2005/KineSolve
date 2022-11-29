@@ -70,6 +70,7 @@ while True:
         print("v = " + str(Vfinal) + "m/s")
         print("Equation: V^2 = v0^2 + 2ax")
         print("v^2 = " + str(Vinitial)**2 + "^2 + (2)" + str(acceleration) + "(" + str(deltaX) + ")" )
+        #print(str(Vfinal) + " = " + "(" + str(Vinitial) + "^2" + )
 
     #Requires v0, v, a
     elif (solveFor == "x") and (Vinitial != "u") and (acceleration != "u") and (Vfinal  != "u"):
@@ -121,7 +122,7 @@ while True:
         print("")
         print("v0 = " + str(Vinitial) + "m/s")
         print("Equation: x = v0t + 1/2 * at^2")
-        print(str(deltaX) + " = v0 + (1/2)" + str(acceleration) + "(" + str(time) + ")^2" )
+        print(str(deltaX) + " = v0(" + str(time) + ") + (1/2)" + str(acceleration) + "(" + str(time) + ")^2" )
 
     #Requires a, v0, x
     elif (solveFor == "t") and (acceleration != "u") and (deltaX != "u") and (Vinitial != "u"):
