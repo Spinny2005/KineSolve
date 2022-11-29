@@ -62,7 +62,7 @@ while True:
     #V^2 = v0^2 + 2ax
     #Requires v0, a, x
     elif (solveFor == "v") and (Vinitial != "u") and (acceleration != "u") and (deltaX != "u"):
-        Vfinal = math.sqrt(math.abs(float(Vinitial)**2 + 2 * float(acceleration) * float(deltaX)))
+        Vfinal = math.sqrt(abs(float(Vinitial)**2 + 2 * float(acceleration) * float(deltaX)))
         print("")
         print("v = " + str(Vfinal) + "m/s")
         print("Equation: V^2 = v0^2 + 2ax")
@@ -78,7 +78,7 @@ while True:
 
     #Requires v, a, x
     elif (solveFor == "v0") and (deltaX != "u") and (acceleration != "u") and (Vfinal  != "u"):
-        Vinitial = math.sqrt(math.abs(float(Vfinal)**2 - (2 * float(acceleration) * float(deltaX))))
+        Vinitial = math.sqrt(abs(float(Vfinal)**2 - (2 * float(acceleration) * float(deltaX))))
         print("")
         print("v0 = " + str(Vinitial) + "m/s")
         print("Equation: V^2 = v0^2 + 2ax")
@@ -123,10 +123,10 @@ while True:
         a = 0.5 * float(acceleration)
         b = float(Vinitial)
         c = float(deltaX) * -1
-        if ((-b + math.sqrt(b**2 - 4 * a * c))/(2*a)) < 0:
-            time = ((-b - math.sqrt(b**2 - 4 * a * c))/(2*a))
+        if ((-b + math.sqrt(abs(b**2 - 4 * a * c)))/(2*a)) < 0:
+            time = ((-b - math.sqrt(abs(b**2 - 4 * a * c)))/(2*a))
         else:
-            time = (-b + math.sqrt(b**2 - 4 * a * c))/(2*a)
+            time = (-b + math.sqrt(abs(b**2 - 4 * a * c)))/(2*a)
         print("")
         print("t = " + str(time)+ "s")
         print("Equation: x = v0t + 1/2 * at^2")
