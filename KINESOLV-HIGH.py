@@ -109,7 +109,7 @@ while True:
         print("x = " + str(deltaX) + "m")
         print("Equation: x = v0t + 1/2 * at^2")
         print("x = " + str(Vinitial) + " + (1/2)" + str(acceleration) + "(" + str(time) + ")^2" )
-        print(str(deltaX) + " = " + str(Vinitial) + " * " + str(time) + " + (1/2 * " + str(acceleration) + str(time) + "^2)")
+        print(str(deltaX) + " = " + str(Vinitial) + " * " + str(time) + " + (1/2 * " + str(acceleration) + " * " + str(time) + "^2)")
 
     #Requires x, v0, t
     elif (solveFor == "a") and (Vinitial != "u") and (deltaX != "u") and (time != "u"):
@@ -142,7 +142,7 @@ while True:
         print("t = " + str(time)+ "s")
         print("Equation: x = v0t + 1/2 * at^2")
         print(str(deltaX) + " = " + str(Vinitial) + " + (1/2)" + str(acceleration) + "(t)^2" )
-        print(str(time) + " = (-" + str(b) - "sqrt(" + str(b) + "^2 - 4(" + str(a) + ")(" + str(c) + ")/(2 * " + str(a))
+        print(str(time) + " = (-" + str(b) + " - sqrt(" + str(b) + "^2 - 4(" + str(a) + ")(" + str(c) + ")/(2 * " + str(a) + ")")
 
 
     else:
