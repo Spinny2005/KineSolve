@@ -26,6 +26,36 @@ while True:
     print("Enter variable to solve for. ")
     solveFor = input("(v, v0, a, t, x): ")
 
+    if (Vfinal != "u") and (Vfinal != ""):
+        Vfinal = Vfinal.replace('^', '**')
+        Vfinal = eval(Vfinal)
+    if (Vfinal == ""):
+        Vfinal = "u"
+
+    if (Vinitial != "u") and (Vinitial != ""):
+        Vinitial = Vinitial.replace('^', '**')
+        Vinitial = eval(str(Vinitial))
+    if (Vinitial == ""):
+        Vinitial = "u"
+
+    if (acceleration != "u") and (acceleration != ""):
+        acceleration = acceleration.replace('^', '**')
+        acceleration = eval(acceleration)
+    if (acceleration == ""):
+        acceleration = "u"
+
+    if (time != "u") and (time != ""):
+        time = time.replace('^', '**')
+        time = eval(time)
+    if (time == ""):
+        time = "u"
+
+    if (deltaX != "u") and (deltaX != ""):
+        deltaX = deltaX.replace('^', '**')
+        deltaX = eval(deltaX)
+    if (deltaX == ""):
+        deltaX = "u"
+
     #V = v0 + at
     #Requires v0, a, t
     if (solveFor == "v") and (Vinitial != "u") and (acceleration != "u") and (time != "u"):
@@ -70,8 +100,8 @@ while True:
         print("")
         print("v = " + str(Vfinal) + "m/s")
         print("Equation: V^2 = v0^2 + 2ax")
-        print("v^2 = " + str(Vinitial)**2 + "^2 + (2)" + str(acceleration) + "(" + str(deltaX) + ")" )
-        print(str(Vfinal) + " = " + "(" + str(Vinitial) + "^2" + "(2)" + str(acceleration) + "(" + str(deltaX) + ")")
+        print("v^2 = " + str(Vinitial) + "^2 + (2)" + str(acceleration) + "(" + str(deltaX) + ")" )
+        print(str(Vfinal) + " = " + "sqrt(" + str(Vinitial) + "^2 + " + "(2)" + str(acceleration) + "(" + str(deltaX) + "))")
 
     #Requires v0, v, a
     elif (solveFor == "x") and (Vinitial != "u") and (acceleration != "u") and (Vfinal  != "u"):
@@ -79,7 +109,7 @@ while True:
         print("")
         print("x = " + str(deltaX)+ "m")
         print("Equation: V^2 = v0^2 + 2ax")
-        print(str(Vfinal)**2 + " = " + str(Vinitial)**2 + "^2 + (2)" + str(acceleration) + "(x)" )
+        print(str(Vfinal) + "^2 = " + str(Vinitial) + "^2 + (2)" + str(acceleration) + "(x)" )
         print(str(deltaX) + " = (" + str(float(Vfinal)**2) + " - " + str(float(Vinitial)**2) + ")/" + str(2 * float(acceleration)))
 
     #Requires v, a, x
@@ -88,7 +118,7 @@ while True:
         print("")
         print("v0 = " + str(Vinitial) + "m/s")
         print("Equation: V^2 = v0^2 + 2ax")
-        print(str(Vfinal)**2 + " = " + "v0^2 + (2)" + str(acceleration) + "(" + str(deltaX) + ")" )
+        print(str(Vfinal) + "^2 = " + "v0^2 + (2)" + str(acceleration) + "(" + str(deltaX) + ")" )
         print(str(Vinitial) + " = sqrt(" + str(float(Vfinal)**2) + " - (" + str(2 * float(acceleration)) + " * " + str(deltaX) + "))")
 
     #Requires v, v0, deltaX
@@ -97,7 +127,7 @@ while True:
         print("")
         print("a = " + str(acceleration)+ "m/s^2")
         print("Equation: V^2 = v0^2 + 2ax")
-        print(str(Vfinal)**2 + " = " + str(Vinitial)**2 + "^2 + 2a(" + str(deltaX) + ")" )
+        print(str(Vfinal) + "^2 = " + str(Vinitial) + "^2 + 2a(" + str(deltaX) + ")" )
         print(str(acceleration) + " = " + "(" + str(Vfinal) + "^2 - " + str(Vinitial) + "^2)/(2 * " + str(deltaX) + ")")
 
 
@@ -109,7 +139,7 @@ while True:
         print("x = " + str(deltaX) + "m")
         print("Equation: x = v0t + 1/2 * at^2")
         print("x = " + str(Vinitial) + " + (1/2)" + str(acceleration) + "(" + str(time) + ")^2" )
-        print(str(deltaX) + " = " + str(Vinitial) + " * " + str(time) + " + (1/2 * " + str(acceleration) + str(time) + "^2)")
+        print(str(deltaX) + " = " + str(Vinitial) + " * " + str(time) + " + (1/2 * " + str(acceleration) + " * " + str(time) + "^2)")
 
     #Requires x, v0, t
     elif (solveFor == "a") and (Vinitial != "u") and (deltaX != "u") and (time != "u"):
@@ -136,13 +166,18 @@ while True:
         c = float(deltaX) * -1
         if ((-b + math.sqrt(abs(b**2 - 4 * a * c)))/(2*a)) < 0:
             time = ((-b - math.sqrt(abs(b**2 - 4 * a * c)))/(2*a))
+            d = "neg"
         else:
             time = (-b + math.sqrt(abs(b**2 - 4 * a * c)))/(2*a)
+            d = "pos"
         print("")
         print("t = " + str(time)+ "s")
         print("Equation: x = v0t + 1/2 * at^2")
         print(str(deltaX) + " = " + str(Vinitial) + " + (1/2)" + str(acceleration) + "(t)^2" )
-        print(str(time) + " = (-" + str(b) - "sqrt(" + str(b) + "^2 - 4(" + str(a) + ")(" + str(c) + ")/(2 * " + str(a))
+        if (d == "neg"):
+            print(str(time) + " = -" + str(b) + " - sqrt(" + str(b) + "^2 - 4(" + str(a) + ")(" + str(c) + "))/(2 * " + str(a) + ")")
+        elif (d == "pos"):
+            print(str(time) + " = -" + str(b) + " + sqrt(" + str(b) + "^2 - 4(" + str(a) + ")(" + str(c) + "))/(2 * " + str(a) + ")")
 
 
     else:
